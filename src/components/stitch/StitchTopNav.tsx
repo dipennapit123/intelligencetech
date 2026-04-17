@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export type NavData = {
   mainLinks: Array<{ label: string; href: string }>;
@@ -35,10 +35,6 @@ export function StitchTopNav({ data }: { data?: NavData | null }) {
   const pathname = usePathname() || "/";
   const d = data ?? FALLBACK;
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
 
   return (
     <motion.header
@@ -93,16 +89,25 @@ export function StitchTopNav({ data }: { data?: NavData | null }) {
                 key={link.href}
                 href={link.href}
                 className="flex items-center justify-between rounded-lg px-3 py-3 text-[#14213d] font-medium hover:bg-[#f5f5f5] transition"
+                onClick={() => setMobileOpen(false)}
               >
                 <span>{link.label}</span>
                 <span className="material-symbols-outlined text-[18px] text-[#14213d]/50">chevron_right</span>
               </Link>
             ))}
             <div className="pt-2 grid grid-cols-1 gap-2">
-              <Link className="rounded-lg px-3 py-3 text-center border border-[#14213d]/10 text-[#14213d] font-semibold hover:bg-[#f5f5f5] transition" href={d.signInHref}>
+              <Link
+                className="rounded-lg px-3 py-3 text-center border border-[#14213d]/10 text-[#14213d] font-semibold hover:bg-[#f5f5f5] transition"
+                href={d.signInHref}
+                onClick={() => setMobileOpen(false)}
+              >
                 {d.signInLabel}
               </Link>
-              <Link className="rounded-lg px-3 py-3 text-center bg-linear-to-br from-[#14213d] to-[#fca311] text-white font-semibold shadow-md" href={d.ctaHref}>
+              <Link
+                className="rounded-lg px-3 py-3 text-center bg-linear-to-br from-[#14213d] to-[#fca311] text-white font-semibold shadow-md"
+                href={d.ctaHref}
+                onClick={() => setMobileOpen(false)}
+              >
                 {d.ctaLabel}
               </Link>
             </div>

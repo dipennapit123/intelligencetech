@@ -22,7 +22,7 @@ export function BlogIndexClient({ blogs }: { blogs: BlogCard[] }) {
     <main className="pt-24">
       {/* Header — white */}
       <section className="bg-surface">
-        <div className="max-w-screen-2xl mx-auto px-8 pt-10 pb-10 md:pt-12 md:pb-12">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 pt-8 sm:pt-10 pb-8 sm:pb-10 md:pt-12 md:pb-12">
           <FadeUp className="space-y-5 max-w-3xl">
             <span className="text-primary font-bold tracking-widest text-[0.6875rem] uppercase block">
               Updates
@@ -47,14 +47,14 @@ export function BlogIndexClient({ blogs }: { blogs: BlogCard[] }) {
         return (
           <section
             key={b.id}
-            className={`px-8 py-14 md:py-18 ${isGrey ? "bg-surface-container-low" : "bg-surface"}`}
+            className={`px-4 sm:px-6 md:px-8 py-12 sm:py-14 md:py-18 ${isGrey ? "bg-surface-container-low" : "bg-surface"}`}
           >
             <div
               className={`max-w-screen-xl mx-auto grid gap-12 lg:gap-16 items-center ${
-                imageFirst ? "md:grid-cols-[380px_1fr]" : "md:grid-cols-[1fr_380px]"
+                imageFirst ? "lg:grid-cols-[380px_1fr]" : "lg:grid-cols-[1fr_380px]"
               }`}
             >
-              <TextColumn className={`space-y-5 ${imageFirst ? "md:order-2" : ""}`}>
+              <TextColumn className={`space-y-5 ${imageFirst ? "lg:order-2" : ""}`}>
                 <FadeIn>
                   <div className="text-primary font-bold tracking-widest text-[10px] uppercase">
                     {(b.category ?? "Updates").toString()}
@@ -91,7 +91,7 @@ export function BlogIndexClient({ blogs }: { blogs: BlogCard[] }) {
                 </div>
               </TextColumn>
 
-              <ImageColumn className={`relative ${imageFirst ? "md:order-1" : ""}`}>
+              <ImageColumn className={`relative ${imageFirst ? "lg:order-1" : ""}`}>
                 <ScaleIn>
                   <div className="absolute inset-0 bg-primary/5 rounded-2xl blur-3xl -z-10" />
                   <div className="p-3 rounded-2xl">
@@ -115,7 +115,7 @@ export function BlogIndexClient({ blogs }: { blogs: BlogCard[] }) {
       {/* More posts — grid */}
       {rest.length ? (
         <section className="bg-surface-container-low">
-          <div className="max-w-screen-2xl mx-auto px-8 py-16 md:py-20">
+          <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-14 sm:py-16 md:py-20">
             <FadeUp className="mb-10 max-w-2xl">
               <span className="text-primary font-bold tracking-widest text-[0.6875rem] uppercase block mb-3">
                 More articles
@@ -149,26 +149,26 @@ export function BlogIndexClient({ blogs }: { blogs: BlogCard[] }) {
                         }
                       />
                     </div>
-                    <div className="p-8">
-                    <div className="text-primary font-bold tracking-widest text-[10px] uppercase">
-                      {(b.category ?? "Updates").toString()}
-                    </div>
-                    <h3 className="text-xl font-bold mt-3 mb-2 text-on-surface">
-                      {b.title}
-                    </h3>
-                    <p className="text-sm text-on-surface-variant leading-relaxed mb-6">
-                      {b.meta_description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {(b.tags ?? []).slice(0, 4).map((t) => (
-                        <span
-                          key={t}
-                          className="px-3 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container text-[10px] font-bold tracking-widest uppercase"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
+                    <div className="p-6 sm:p-8">
+                      <div className="text-primary font-bold tracking-widest text-[10px] uppercase">
+                        {(b.category ?? "Updates").toString()}
+                      </div>
+                      <h3 className="text-xl font-bold mt-3 mb-2 text-on-surface">
+                        {b.title}
+                      </h3>
+                      <p className="text-sm text-on-surface-variant leading-relaxed mb-6">
+                        {b.meta_description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {(b.tags ?? []).slice(0, 4).map((t) => (
+                          <span
+                            key={t}
+                            className="px-3 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container text-[10px] font-bold tracking-widest uppercase"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </Link>
                 </StaggerItem>

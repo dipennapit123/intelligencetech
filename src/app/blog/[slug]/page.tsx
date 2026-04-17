@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound, redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 
 import { markdownToHtml } from "@/lib/markdown";
 import { getBaseUrl } from "@/lib/baseUrl";

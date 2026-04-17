@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Intelligence Tech">
+  <defs>
+    <linearGradient id="it-g" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14213d" />
+      <stop offset="1" stop-color="#fca311" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#it-g)" />
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="none" opacity="0.18" stroke="#ffffff" stroke-width="2" />
+  <g fill="#ffffff">
+    <path d="M20 19h10v4h-3v22h-4V23h-3v-4z" />
+    <path d="M34 19h4v26h-4V19z" />
+    <path d="M41 19h11v4h-7v7h6v4h-6v11h-4V19z" opacity="0.92" />
+  </g>
+</svg>

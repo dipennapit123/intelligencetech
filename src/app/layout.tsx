@@ -22,6 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -33,7 +35,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-background text-on-surface font-body selection:bg-primary-container/30 min-h-full flex flex-col antialiased">
+      <body className="bg-background text-on-surface font-body selection:bg-primary-container/30 min-h-full flex flex-col antialiased overflow-x-hidden">
         <NavLoader />
         <main className="flex-1">{children}</main>
         <FooterLoader />

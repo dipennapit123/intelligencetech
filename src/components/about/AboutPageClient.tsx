@@ -33,7 +33,7 @@ export function AboutPageClient({ data }: { data?: AboutData | null }) {
 
   return (
     <main>
-      <section className="pt-28 pb-20 px-8">
+      <section className="pt-20 sm:pt-24 md:pt-28 pb-14 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8">
         <div className="max-w-screen-xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -45,17 +45,17 @@ export function AboutPageClient({ data }: { data?: AboutData | null }) {
             <span className="text-primary tracking-widest text-xs uppercase block mb-4">
               {d.label}
             </span>
-            <h1 className="text-5xl md:text-6xl tracking-tight mb-8">{d.heading}</h1>
-            <p className="text-xl text-on-surface-variant leading-relaxed tracking-normal">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-tight mb-6 sm:mb-8">{d.heading}</h1>
+            <p className="text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed tracking-normal">
               {d.body}
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 px-8 bg-surface-container-low">
+      <section className="py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-surface-container-low">
         <div className="max-w-screen-xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
             {d.pillars.map((item, i) => (
               <FadeUp key={item.title} delay={i * 0.15}>
                 <div className="space-y-4">
@@ -69,10 +69,10 @@ export function AboutPageClient({ data }: { data?: AboutData | null }) {
         </div>
       </section>
 
-      <section className="py-20 px-8">
+      <section className="py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
         <div className="max-w-screen-xl mx-auto">
           <FadeUp>
-            <h2 className="text-4xl tracking-tight mb-12">By the numbers</h2>
+            <h2 className="text-3xl sm:text-4xl tracking-tight mb-8 sm:mb-12">By the numbers</h2>
           </FadeUp>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {d.stats.map((stat, i) => (

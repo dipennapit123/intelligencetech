@@ -63,7 +63,7 @@ export function StitchFooter({ data }: { data?: FooterData | null }) {
 
   return (
     <footer className="w-full bg-[#f5f5f5] border-t border-[#14213d]/8">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-12 px-8 md:px-12 py-16 max-w-screen-2xl mx-auto leading-relaxed text-sm tracking-normal">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 sm:gap-12 px-4 sm:px-6 md:px-12 py-12 sm:py-16 max-w-screen-2xl mx-auto leading-relaxed text-sm tracking-normal">
         <div className="col-span-2 md:col-span-1 space-y-6 flex flex-col items-center">
           <Link href="/" className="flex items-center justify-center w-full">
             <span className="flex flex-col items-center text-[#14213d] leading-[1.1] tracking-[-0.03em]" style={{ fontFamily: '"Saira Stencil", ui-sans-serif, system-ui, sans-serif' }}>
@@ -101,7 +101,7 @@ export function StitchFooter({ data }: { data?: FooterData | null }) {
           </div>
         ))}
       </div>
-      <div className="border-t border-[#14213d]/8 py-8 px-12 text-center text-[#14213d]/50 text-xs">
+      <div className="border-t border-[#14213d]/8 py-8 px-4 sm:px-6 md:px-12 text-center text-[#14213d]/50 text-xs">
         © {new Date().getFullYear()} {d.copyright}. All rights reserved.
       </div>
     </footer>

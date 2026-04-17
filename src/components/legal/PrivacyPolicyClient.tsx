@@ -72,7 +72,7 @@ const FALLBACK: PrivacyData = {
 function SectionBlock({ title, children, tone = "white" }: { title: string; children: React.ReactNode; tone?: "white" | "grey" }) {
   return (
     <section className={tone === "grey" ? "bg-surface-container-low" : "bg-surface"}>
-      <div className="max-w-5xl mx-auto px-6 md:px-12 py-16 md:py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-12 py-12 sm:py-16 md:py-20">
         <FadeUp className="space-y-4">
           <h2 className="text-2xl md:text-3xl font-black tracking-tight text-on-surface">{title}</h2>
           <div className="text-on-surface-variant leading-relaxed">{children}</div>
@@ -86,9 +86,9 @@ export function PrivacyPolicyClient({ data }: { data?: Record<string, unknown> |
   const d = (data as unknown as PrivacyData) ?? FALLBACK;
 
   return (
-    <main className="pt-28">
+    <main className="pt-20 sm:pt-24 md:pt-28">
       <section className="bg-surface">
-        <div className="max-w-5xl mx-auto px-6 md:px-12 py-16 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-12 py-12 sm:py-16 md:py-20">
           <FadeUp className="space-y-5">
             <span className="text-primary font-bold tracking-widest text-[0.6875rem] uppercase block">Legal</span>
             <h1 className="text-4xl md:text-6xl font-black tracking-tight text-on-surface">

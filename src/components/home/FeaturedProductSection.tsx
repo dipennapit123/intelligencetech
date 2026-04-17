@@ -6,8 +6,8 @@ import { FadeUp, ScaleIn } from "@/components/motion/AnimatedSection";
 
 export function FeaturedProductSection() {
   return (
-    <section className="py-36 px-8">
-      <div className="max-w-screen-2xl mx-auto bg-inverse-surface rounded-[2.5rem] p-12 md:p-20 overflow-hidden relative">
+    <section className="py-16 sm:py-24 md:py-36 px-4 sm:px-6 md:px-8">
+      <div className="max-w-screen-2xl mx-auto bg-inverse-surface rounded-4xl p-6 sm:p-10 md:p-20 overflow-hidden relative">
         <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
           <FadeUp className="w-full lg:w-1/2 space-y-8">
             <div className="flex items-center gap-2 text-primary-container text-sm tracking-wider">
@@ -21,7 +21,7 @@ export function FeaturedProductSection() {
               The industry standard for autonomous infrastructure. Predict load
               before it happens and scale without a single manual intervention.
             </p>
-            <div className="grid grid-cols-2 gap-8 pt-4">
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 pt-4">
               {[
                 { value: "99.9%", label: "Uptime Guaranteed" },
                 { value: "40%", label: "Cost Reduction" },
@@ -41,7 +41,7 @@ export function FeaturedProductSection() {
               ))}
             </div>
             <Link
-              className="inline-flex bg-primary text-on-primary px-8 py-4 rounded-xl text-lg hover:brightness-110 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              className="inline-flex bg-primary text-on-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl text-base sm:text-lg hover:brightness-110 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               href="/products/scalewise"
             >
               Try ScaleWise

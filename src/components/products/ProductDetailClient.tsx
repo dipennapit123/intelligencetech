@@ -118,7 +118,7 @@ export function ProductDetailClient({
   return (
     <main className="pt-24 overflow-x-hidden font-body">
       {/* Hero */}
-      <section className="relative min-h-[921px] flex items-center px-6 md:px-12 max-w-[1440px] mx-auto py-20 bg-surface">
+      <section className="relative min-h-[760px] sm:min-h-[820px] md:min-h-[921px] flex items-center px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto py-14 sm:py-16 md:py-20 bg-surface">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <FadeUp className="space-y-8 max-w-xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-full">
@@ -127,16 +127,16 @@ export function ProductDetailClient({
                 {c.eyebrow}
               </span>
             </div>
-            <h1 className="text-6xl md:text-[5.5rem] font-black tracking-tight leading-[1.05] text-on-surface">
+            <h1 className="text-4xl sm:text-5xl md:text-[5.5rem] font-black tracking-tight leading-[1.05] text-on-surface">
               {c.headline}<span className="text-primary">.</span>
             </h1>
-            <h2 className="text-3xl font-bold text-on-surface tracking-tight">{c.subhead}</h2>
-            <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light">{c.heroCopy}</p>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-on-surface tracking-tight">{c.subhead}</h2>
+            <p className="text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed font-light">{c.heroCopy}</p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Link href="/products" className="px-8 py-4 bg-gradient-to-br from-[#855300] to-[#fca311] text-on-primary rounded-xl font-bold text-lg hover:scale-[1.02] transition-all duration-300 shadow-xl shadow-primary/20">
+              <Link href="/products" className="px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-br from-[#855300] to-[#fca311] text-on-primary rounded-xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-all duration-300 shadow-xl shadow-primary/20">
                 Get Started
               </Link>
-              <Link href="/contact" className="px-8 py-4 border-2 border-outline-variant/30 text-on-surface rounded-xl font-bold text-lg hover:bg-surface-container-low transition-colors">
+              <Link href="/contact" className="px-6 sm:px-8 py-3.5 sm:py-4 border-2 border-outline-variant/30 text-on-surface rounded-xl font-bold text-base sm:text-lg hover:bg-surface-container-low transition-colors">
                 Book a Demo
               </Link>
             </div>
@@ -152,7 +152,7 @@ export function ProductDetailClient({
       </section>
 
       {/* Key Benefits */}
-      <section className="py-32 px-6 md:px-12 bg-surface-container-low">
+      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 bg-surface-container-low">
         <div className="max-w-[1440px] mx-auto">
           <StaggerContainer className="grid md:grid-cols-3 gap-12 lg:gap-24">
             {c.benefits.map((b) => (
@@ -214,8 +214,8 @@ export function ProductDetailClient({
         );
 
         return (
-          <section key={d.title} className={`${sectionTone} py-32`}>
-            <div className="max-w-[1440px] mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-20 items-center">
+          <section key={d.title} className={`${sectionTone} py-16 sm:py-24 md:py-32`}>
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center">
               {isImageLeft ? (
                 <>
                   <SlideInLeft className="relative order-2 lg:order-1">{imageEl}</SlideInLeft>
@@ -233,10 +233,10 @@ export function ProductDetailClient({
       })}
 
       {/* Enterprise-Grade Integrity */}
-      <section className="py-32 px-6 md:px-12 bg-surface-container-low">
+      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 bg-surface-container-low">
         <div className="max-w-[1440px] mx-auto">
           <FadeUp className="flex flex-col items-center text-center mb-20 space-y-4">
-            <h2 className="text-4xl font-black tracking-tighter">Enterprise-Grade Integrity</h2>
+            <h2 className="text-3xl sm:text-4xl font-black tracking-tighter">Enterprise-Grade Integrity</h2>
             <div className="w-24 h-1 bg-primary-container" />
           </FadeUp>
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
@@ -258,10 +258,10 @@ export function ProductDetailClient({
       </section>
 
       {/* Testimonial */}
-      <section className="py-32 bg-on-background text-surface">
-        <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
+      <section className="py-16 sm:py-24 md:py-32 bg-on-background text-surface">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-10 sm:space-y-12">
           <span className="material-symbols-outlined text-primary text-6xl" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
-          <p className="text-3xl md:text-5xl font-light italic leading-tight tracking-tight">
+          <p className="text-xl sm:text-3xl md:text-5xl font-light italic leading-tight tracking-tight">
             &quot;{testimonial.quote}&quot;
           </p>
           <div className="space-y-2">
@@ -272,16 +272,16 @@ export function ProductDetailClient({
       </section>
 
       {/* Final CTA */}
-      <section className="relative py-40 overflow-hidden bg-surface-container-low">
-        <div className="max-w-[1440px] mx-auto px-6 text-center space-y-12">
+      <section className="relative py-20 sm:py-28 md:py-40 overflow-hidden bg-surface-container-low">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 text-center space-y-10 sm:space-y-12">
           <FadeUp>
-            <h2 className="text-6xl md:text-8xl font-black tracking-tighter text-on-surface">{cta.heading}</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-8xl font-black tracking-tighter text-on-surface">{cta.heading}</h2>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <p className="text-xl text-on-surface-variant max-w-2xl mx-auto">{cta.body}</p>
+            <p className="text-base sm:text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto">{cta.body}</p>
           </FadeUp>
           <FadeUp delay={0.2} className="flex justify-center">
-            <Link href={cta.buttonHref} className="bg-[#FCA311] text-on-primary-container px-12 py-6 rounded-2xl font-black text-2xl hover:scale-110 transition-transform duration-300 shadow-2xl shadow-primary/30">
+            <Link href={cta.buttonHref} className="bg-[#FCA311] text-on-primary-container px-8 sm:px-12 py-4 sm:py-6 rounded-2xl font-black text-lg sm:text-2xl hover:scale-110 transition-transform duration-300 shadow-2xl shadow-primary/30">
               {cta.buttonLabel}
             </Link>
           </FadeUp>

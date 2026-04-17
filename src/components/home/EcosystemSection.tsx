@@ -5,13 +5,13 @@ import { FadeUp, SlideInLeft, SlideInRight } from "@/components/motion/AnimatedS
 
 export function EcosystemSection() {
   return (
-    <section className="py-28 px-8 overflow-hidden bg-surface">
+    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-8 overflow-hidden bg-surface">
       <div className="max-w-screen-2xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-20">
+        <div className="flex flex-col md:flex-row items-center gap-12 sm:gap-16 md:gap-20">
           <SlideInLeft className="w-full md:w-2/5 order-2 md:order-1">
             <div className="relative">
               <div className="w-full aspect-square flex items-center justify-center">
-                <div className="relative w-80 h-80">
+                <div className="relative w-72 h-72 sm:w-80 sm:h-80">
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 60, repeat: Infinity, ease: "linear" }}

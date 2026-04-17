@@ -70,7 +70,7 @@ export function ProductsPageClient({
   return (
     <div>
       {/* Page header — white */}
-      <section className="pt-28 pb-12 px-8 bg-surface">
+      <section className="pt-20 sm:pt-24 md:pt-28 pb-10 sm:pb-12 px-4 sm:px-6 md:px-8 bg-surface">
         <div className="max-w-screen-xl mx-auto">
           <FadeUp>
             <span className="text-primary font-bold tracking-widest text-[0.6875rem] uppercase block mb-4">
@@ -97,15 +97,15 @@ export function ProductsPageClient({
         return (
           <section
             key={p.id}
-            className={`px-8 py-16 md:py-24 ${isGrey ? "bg-surface-container-low" : "bg-surface"}`}
+            className={`px-4 sm:px-6 md:px-8 py-14 sm:py-16 md:py-24 ${isGrey ? "bg-surface-container-low" : "bg-surface"}`}
           >
             <div
-              className={`max-w-screen-xl mx-auto grid gap-12 lg:gap-16 items-center ${
-                imageFirst ? "md:grid-cols-[380px_1fr]" : "md:grid-cols-[1fr_380px]"
+              className={`max-w-screen-xl mx-auto grid gap-10 sm:gap-12 lg:gap-16 items-center ${
+                imageFirst ? "lg:grid-cols-[380px_1fr]" : "lg:grid-cols-[1fr_380px]"
               }`}
             >
               {/* Text column */}
-              <TextColumn className={`space-y-5 ${imageFirst ? "md:order-2" : ""}`}>
+              <TextColumn className={`space-y-5 ${imageFirst ? "lg:order-2" : ""}`}>
                 <FadeIn>
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-full">
                     <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
@@ -141,7 +141,7 @@ export function ProductsPageClient({
               </TextColumn>
 
               {/* Image column */}
-              <ImageColumn className={`relative ${imageFirst ? "md:order-1" : ""}`}>
+              <ImageColumn className={`relative ${imageFirst ? "lg:order-1" : ""}`}>
                 <ScaleIn>
                   <div className="absolute inset-0 bg-primary/5 rounded-2xl blur-3xl -z-10" />
                   <div className="p-3 rounded-2xl">
@@ -160,7 +160,7 @@ export function ProductsPageClient({
       })}
 
       {/* Other products (marquee) — white */}
-      <section className="py-20 px-8 bg-surface">
+      <section className="py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-surface">
         <div className="max-w-screen-2xl mx-auto">
           <FadeUp className="mb-10">
             <span className="text-primary font-bold tracking-widest text-[0.6875rem] uppercase block mb-3">

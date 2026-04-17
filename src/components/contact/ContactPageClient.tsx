@@ -67,9 +67,9 @@ export function ContactPageClient({ data }: { data?: ContactData | null }) {
 
   return (
     <main>
-      <section className="pt-28 pb-20 px-8">
+      <section className="pt-20 sm:pt-24 md:pt-28 pb-14 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8">
         <div className="max-w-screen-xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -79,8 +79,8 @@ export function ContactPageClient({ data }: { data?: ContactData | null }) {
               <span className="text-primary tracking-widest text-xs uppercase block mb-4">
                 {d.eyebrow}
               </span>
-              <h1 className="text-5xl md:text-6xl tracking-tight mb-8">{d.heading}</h1>
-              <p className="text-xl text-on-surface-variant leading-relaxed tracking-normal mb-12">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-tight mb-6 sm:mb-8">{d.heading}</h1>
+              <p className="text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed tracking-normal mb-8 sm:mb-12">
                 {d.body}
               </p>
 
@@ -99,7 +99,7 @@ export function ContactPageClient({ data }: { data?: ContactData | null }) {
 
             <FadeUp delay={0.2}>
               {submitted ? (
-                <div className="bg-surface-container-low rounded-2xl p-12 flex flex-col items-center justify-center text-center space-y-4">
+                <div className="bg-surface-container-low rounded-2xl p-8 sm:p-12 flex flex-col items-center justify-center text-center space-y-4">
                   <span className="material-symbols-outlined text-primary text-6xl">check_circle</span>
                   <h3 className="text-2xl tracking-normal">Message sent!</h3>
                   <p className="text-on-surface-variant tracking-normal">
@@ -109,7 +109,7 @@ export function ContactPageClient({ data }: { data?: ContactData | null }) {
               ) : (
                 <form
                   onSubmit={(e) => void handleSubmit(e)}
-                  className="relative bg-surface-container-low rounded-2xl p-10 space-y-6"
+                  className="relative bg-surface-container-low rounded-2xl p-6 sm:p-10 space-y-6"
                 >
                   {error && (
                     <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900" role="alert">
@@ -189,7 +189,7 @@ export function ContactPageClient({ data }: { data?: ContactData | null }) {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-primary text-on-primary py-4 rounded-xl text-lg hover:brightness-110 transition-all shadow-lg hover:shadow-xl disabled:opacity-60"
+                    className="w-full bg-primary text-on-primary py-3.5 sm:py-4 rounded-xl text-base sm:text-lg hover:brightness-110 transition-all shadow-lg hover:shadow-xl disabled:opacity-60"
                   >
                     {loading ? "Sending…" : "Send Message"}
                   </button>

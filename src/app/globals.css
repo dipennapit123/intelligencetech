@@ -78,6 +78,11 @@
   --font-label: "Saira Stencil", ui-sans-serif, system-ui, sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #ffffff;
   color: #14213d;

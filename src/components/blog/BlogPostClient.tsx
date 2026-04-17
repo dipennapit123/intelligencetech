@@ -59,7 +59,7 @@ export function BlogPostClient({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Header — white */}
       <section className="bg-surface">
-        <div className="max-w-screen-md mx-auto px-8 pt-6 pb-8 md:pt-8 md:pb-10">
+        <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 pt-6 pb-8 md:pt-8 md:pb-10">
           <FadeUp className="space-y-6">
             <div className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase">
               {(category ?? "Updates").toString()}
@@ -67,7 +67,7 @@ export function BlogPostClient({
             <h1 className="text-[2.5rem] md:text-[3.25rem] font-black leading-tight tracking-[0.03em] text-on-surface">
               {title}
             </h1>
-            <p className="text-lg text-on-surface-variant leading-relaxed tracking-[0.04em]">
+            <p className="text-base sm:text-lg text-on-surface-variant leading-relaxed tracking-[0.04em]">
               {metaDescription}
             </p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-on-surface-variant tracking-[0.04em]">
@@ -96,7 +96,7 @@ export function BlogPostClient({
 
       {/* Content — grey */}
       <section className="bg-surface-container-low">
-        <div className="max-w-screen-md mx-auto px-8 py-14 md:py-16">
+        <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-14 md:py-16">
           <FadeUp>
             <article className="space-y-10">
               {featuredImage ? (
@@ -104,14 +104,14 @@ export function BlogPostClient({
                 <img
                   alt={title}
                   src={featuredImage}
-                  className="w-full h-72 md:h-96 object-cover rounded-2xl shadow-2xl"
+                  className="w-full h-56 sm:h-72 md:h-96 object-cover rounded-2xl shadow-2xl"
                 />
               ) : null}
               <section
                 className="prose-it max-w-none text-on-surface"
                 dangerouslySetInnerHTML={{ __html: html }}
               />
-              <div className="rounded-2xl border border-outline-variant/15 bg-surface p-8 shadow-[0_18px_48px_rgba(20,33,61,0.06)]">
+              <div className="rounded-2xl border border-outline-variant/15 bg-surface p-6 sm:p-8 shadow-[0_18px_48px_rgba(20,33,61,0.06)]">
                 <div className="text-primary font-bold tracking-widest text-[10px] uppercase">Next</div>
                 <div className="mt-2 text-2xl font-black tracking-tight text-on-surface">
                   Want more updates?
