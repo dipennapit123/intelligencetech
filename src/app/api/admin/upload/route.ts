@@ -1,29 +1,40 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import { requireAdmin } from "@/lib/auth";
+import { corsPreflight, withCors } from "@/lib/cors";
 import { getSupabaseAdmin } from "@/lib/supabaseAdmin";
+
+export async function OPTIONS(request: NextRequest) {
+  return corsPreflight(request);
+}
 
 export async function POST(request: NextRequest) {
   const admin = await requireAdmin(request);
   if (!admin.ok) {
-    return NextResponse.json({ error: admin.message }, { status: admin.status });
+    return withCors(
+      request,
+      NextResponse.json({ error: admin.message }, { status: admin.status }),
+    );
   }
 
   const supabaseAdmin = getSupabaseAdmin();
   const form = await request.formData().catch(() => null);
   if (!form) {
-    return NextResponse.json({ error: "Expected multipart form data" }, { status: 400 });
+    return withCors(
+      request,
+      NextResponse.json({ error: "Expected multipart form data" }, { status: 400 }),
+    );
   }
 
   const file = form.get("file");
   if (!(file instanceof File)) {
-    return NextResponse.json({ error: "Missing file" }, { status: 400 });
+    return withCors(request, NextResponse.json({ error: "Missing file" }, { status: 400 }));
   }
 
   const bucket = (form.get("bucket") as string) || "blog-images";
   const allowedBuckets = ["blog-images", "product-images"];
   if (!allowedBuckets.includes(bucket)) {
-    return NextResponse.json({ error: "Invalid bucket" }, { status: 400 });
+    return withCors(request, NextResponse.json({ error: "Invalid bucket" }, { status: 400 }));
   }
 
   const prefix = bucket === "product-images" ? "products" : "blog";
@@ -38,9 +49,12 @@ export async function POST(request: NextRequest) {
     });
 
   if (uploadError) {
-    return NextResponse.json({ error: uploadError.message }, { status: 500 });
+    return withCors(
+      request,
+      NextResponse.json({ error: uploadError.message }, { status: 500 }),
+    );
   }
 
   const { data } = supabaseAdmin.storage.from(bucket).getPublicUrl(path);
-  return NextResponse.json({ url: data.publicUrl, path });
+  return withCors(request, NextResponse.json({ url: data.publicUrl, path }));
 }

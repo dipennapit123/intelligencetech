@@ -2,8 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { revalidateTag } from "next/cache";
 
 import { requireAdmin } from "@/lib/auth";
+import { corsPreflight, withCors } from "@/lib/cors";
 import { getSupabaseAdmin } from "@/lib/supabaseAdmin";
 import { SiteContentUpsertSchema } from "@/lib/validators";
+
+export async function OPTIONS(request: NextRequest) {
+  return corsPreflight(request);
+}
 
 export async function GET(
   request: NextRequest,
@@ -11,7 +16,10 @@ export async function GET(
 ) {
   const admin = await requireAdmin(request);
   if (!admin.ok) {
-    return NextResponse.json({ error: admin.message }, { status: admin.status });
+    return withCors(
+      request,
+      NextResponse.json({ error: admin.message }, { status: admin.status }),
+    );
   }
 
   const { key } = await params;
@@ -22,9 +30,9 @@ export async function GET(
     .eq("key", key)
     .maybeSingle();
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  if (!data) return NextResponse.json({ error: "Not found" }, { status: 404 });
-  return NextResponse.json(data);
+  if (error) return withCors(request, NextResponse.json({ error: error.message }, { status: 500 }));
+  if (!data) return withCors(request, NextResponse.json({ error: "Not found" }, { status: 404 }));
+  return withCors(request, NextResponse.json(data));
 }
 
 export async function PUT(
@@ -33,16 +41,22 @@ export async function PUT(
 ) {
   const admin = await requireAdmin(request);
   if (!admin.ok) {
-    return NextResponse.json({ error: admin.message }, { status: admin.status });
+    return withCors(
+      request,
+      NextResponse.json({ error: admin.message }, { status: admin.status }),
+    );
   }
 
   const { key } = await params;
   const body = await request.json().catch(() => null);
   const parsed = SiteContentUpsertSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: "Invalid payload", details: parsed.error.flatten() },
-      { status: 400 },
+    return withCors(
+      request,
+      NextResponse.json(
+        { error: "Invalid payload", details: parsed.error.flatten() },
+        { status: 400 },
+      ),
     );
   }
 
@@ -51,9 +65,9 @@ export async function PUT(
     .from("site_content")
     .upsert({ key, value: parsed.data.value }, { onConflict: "key" });
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (error) return withCors(request, NextResponse.json({ error: error.message }, { status: 500 }));
 
   revalidateTag("site-content", "max");
 
-  return NextResponse.json({ ok: true });
+  return withCors(request, NextResponse.json({ ok: true }));
 }

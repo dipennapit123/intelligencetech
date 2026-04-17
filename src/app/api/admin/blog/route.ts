@@ -2,13 +2,21 @@ import { NextRequest, NextResponse } from "next/server";
 import { revalidateTag } from "next/cache";
 
 import { requireAdmin } from "@/lib/auth";
+import { corsPreflight, withCors } from "@/lib/cors";
 import { getSupabaseAdmin } from "@/lib/supabaseAdmin";
 import { BlogUpsertSchema } from "@/lib/validators";
+
+export async function OPTIONS(request: NextRequest) {
+  return corsPreflight(request);
+}
 
 export async function GET(request: NextRequest) {
   const admin = await requireAdmin(request);
   if (!admin.ok) {
-    return NextResponse.json({ error: admin.message }, { status: admin.status });
+    return withCors(
+      request,
+      NextResponse.json({ error: admin.message }, { status: admin.status }),
+    );
   }
 
   const supabaseAdmin = getSupabaseAdmin();
@@ -19,23 +27,29 @@ export async function GET(request: NextRequest) {
     )
     .order("created_at", { ascending: false });
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  return NextResponse.json({ blogs: data ?? [] });
+  if (error) return withCors(request, NextResponse.json({ error: error.message }, { status: 500 }));
+  return withCors(request, NextResponse.json({ blogs: data ?? [] }));
 }
 
 export async function POST(request: NextRequest) {
   const admin = await requireAdmin(request);
   if (!admin.ok) {
-    return NextResponse.json({ error: admin.message }, { status: admin.status });
+    return withCors(
+      request,
+      NextResponse.json({ error: admin.message }, { status: admin.status }),
+    );
   }
 
   const supabaseAdmin = getSupabaseAdmin();
   const body = await request.json().catch(() => null);
   const parsed = BlogUpsertSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: "Invalid payload", details: parsed.error.flatten() },
-      { status: 400 },
+    return withCors(
+      request,
+      NextResponse.json(
+        { error: "Invalid payload", details: parsed.error.flatten() },
+        { status: 400 },
+      ),
     );
   }
 
@@ -57,8 +71,8 @@ export async function POST(request: NextRequest) {
     .select("id")
     .single();
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (error) return withCors(request, NextResponse.json({ error: error.message }, { status: 500 }));
   revalidateTag("blog", "max");
-  return NextResponse.json({ id: data.id }, { status: 201 });
+  return withCors(request, NextResponse.json({ id: data.id }, { status: 201 }));
 }
 

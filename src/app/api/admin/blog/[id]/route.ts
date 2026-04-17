@@ -2,8 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { revalidateTag } from "next/cache";
 
 import { requireAdmin } from "@/lib/auth";
+import { corsPreflight, withCors } from "@/lib/cors";
 import { getSupabaseAdmin } from "@/lib/supabaseAdmin";
 import { BlogUpsertSchema } from "@/lib/validators";
+
+export async function OPTIONS(request: NextRequest) {
+  return corsPreflight(request);
+}
 
 export async function GET(
   request: NextRequest,
@@ -11,7 +16,10 @@ export async function GET(
 ) {
   const admin = await requireAdmin(request);
   if (!admin.ok) {
-    return NextResponse.json({ error: admin.message }, { status: admin.status });
+    return withCors(
+      request,
+      NextResponse.json({ error: admin.message }, { status: admin.status }),
+    );
   }
 
   const { id } = await params;
@@ -24,9 +32,9 @@ export async function GET(
     .eq("id", id)
     .maybeSingle();
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  if (!data) return NextResponse.json({ error: "Not found" }, { status: 404 });
-  return NextResponse.json({ blog: data });
+  if (error) return withCors(request, NextResponse.json({ error: error.message }, { status: 500 }));
+  if (!data) return withCors(request, NextResponse.json({ error: "Not found" }, { status: 404 }));
+  return withCors(request, NextResponse.json({ blog: data }));
 }
 
 export async function PUT(
@@ -35,16 +43,22 @@ export async function PUT(
 ) {
   const admin = await requireAdmin(request);
   if (!admin.ok) {
-    return NextResponse.json({ error: admin.message }, { status: admin.status });
+    return withCors(
+      request,
+      NextResponse.json({ error: admin.message }, { status: admin.status }),
+    );
   }
 
   const supabaseAdmin = getSupabaseAdmin();
   const body = await request.json().catch(() => null);
   const parsed = BlogUpsertSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: "Invalid payload", details: parsed.error.flatten() },
-      { status: 400 },
+    return withCors(
+      request,
+      NextResponse.json(
+        { error: "Invalid payload", details: parsed.error.flatten() },
+        { status: 400 },
+      ),
     );
   }
 
@@ -66,9 +80,9 @@ export async function PUT(
     })
     .eq("id", id);
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (error) return withCors(request, NextResponse.json({ error: error.message }, { status: 500 }));
   revalidateTag("blog", "max");
-  return NextResponse.json({ ok: true });
+  return withCors(request, NextResponse.json({ ok: true }));
 }
 
 export async function PATCH(
@@ -77,7 +91,10 @@ export async function PATCH(
 ) {
   const admin = await requireAdmin(request);
   if (!admin.ok) {
-    return NextResponse.json({ error: admin.message }, { status: admin.status });
+    return withCors(
+      request,
+      NextResponse.json({ error: admin.message }, { status: admin.status }),
+    );
   }
 
   const supabaseAdmin = getSupabaseAdmin();
@@ -91,17 +108,20 @@ export async function PATCH(
       : null;
 
   if (published === null) {
-    return NextResponse.json(
-      { error: "Invalid payload: expected { published: boolean }" },
-      { status: 400 },
+    return withCors(
+      request,
+      NextResponse.json(
+        { error: "Invalid payload: expected { published: boolean }" },
+        { status: 400 },
+      ),
     );
   }
 
   const { id } = await params;
   const { error } = await supabaseAdmin.from("blogs").update({ published }).eq("id", id);
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (error) return withCors(request, NextResponse.json({ error: error.message }, { status: 500 }));
   revalidateTag("blog", "max");
-  return NextResponse.json({ ok: true });
+  return withCors(request, NextResponse.json({ ok: true }));
 }
 
 export async function DELETE(
@@ -110,13 +130,16 @@ export async function DELETE(
 ) {
   const admin = await requireAdmin(request);
   if (!admin.ok) {
-    return NextResponse.json({ error: admin.message }, { status: admin.status });
+    return withCors(
+      request,
+      NextResponse.json({ error: admin.message }, { status: admin.status }),
+    );
   }
 
   const supabaseAdmin = getSupabaseAdmin();
   const { id } = await params;
   const { error } = await supabaseAdmin.from("blogs").delete().eq("id", id);
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (error) return withCors(request, NextResponse.json({ error: error.message }, { status: 500 }));
   revalidateTag("blog", "max");
-  return NextResponse.json({ ok: true });
+  return withCors(request, NextResponse.json({ ok: true }));
 }

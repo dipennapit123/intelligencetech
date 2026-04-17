@@ -8,6 +8,9 @@ const EnvSchema = z.object({
 
   SUPABASE_SERVICE_ROLE_KEY: z.string().min(1),
   INTELTECH_ADMIN_EMAILS: z.string().min(1),
+
+  /** Optional: comma-separated origins allowed to call this API cross-site (e.g. admin dashboard domain). */
+  CORS_ALLOWED_ORIGINS: z.string().optional(),
 });
 
 export type Env = z.infer<typeof EnvSchema>;
@@ -23,6 +26,7 @@ export function getEnv(): Env {
     NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
     INTELTECH_ADMIN_EMAILS: process.env.INTELTECH_ADMIN_EMAILS,
+    CORS_ALLOWED_ORIGINS: process.env.CORS_ALLOWED_ORIGINS,
   });
 
   if (!parsed.success) {
@@ -50,6 +54,16 @@ export function getAdminEmailAllowlist() {
   return new Set(
     env.INTELTECH_ADMIN_EMAILS.split(",")
       .map((s) => s.trim().toLowerCase())
+      .filter(Boolean),
+  );
+}
+
+export function getCorsAllowedOrigins() {
+  const env = getEnv();
+  return new Set(
+    (env.CORS_ALLOWED_ORIGINS ?? "")
+      .split(",")
+      .map((s) => s.trim())
       .filter(Boolean),
   );
 }
