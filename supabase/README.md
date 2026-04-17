@@ -24,12 +24,12 @@ So: **Supabase ↔ main web API**; **admin ↔ main web API**; not **admin ↔ S
 1. Create a project at [supabase.com](https://supabase.com).
 2. **Settings → API**: copy URL, anon key, service role key.
 3. **SQL Editor**: run `migrations/001_create_tables.sql`, then `seed.sql`.
-4. **Default dev admin (optional)**  
+4. **Dev admin (optional)**  
    After `.env.local` has real Supabase URL + **service role** key, from `intelligence-tech-web` run:
    ```bash
-   npm run seed:admin
+   DEV_ADMIN_PASSWORD='your-strong-password' npm run seed:admin
    ```
-   This creates **email** `admin@gmail.com` and **password** `admin123` in Supabase Auth (or no-ops if the user already exists).  
+   This creates **email** `admin@gmail.com` and the password you provided in Supabase Auth (or no-ops if the user already exists).  
    Or add that user manually: **Authentication → Users → Add user** with the same email/password.
 
 5. Fill **`intelligence-tech-web/.env.local`** (use the same keys from the dashboard; `INTELTECH_ADMIN_EMAILS` must match the admin Auth user, default **`admin@gmail.com`**):
@@ -50,7 +50,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
 ```
 
-7. Start the web app on port 3000, admin on 3001 if you use two terminals. Sign in with **admin@gmail.com** / **admin123** (after `seed:admin` or manual user creation).
+7. Start the web app on port 3000, admin on 3001 if you use two terminals. Sign in with the admin email/password you created (after `seed:admin` or manual user creation).
 
 **Production:** Change the password in Supabase Auth and rotate credentials; do not rely on default dev passwords.
 

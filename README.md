@@ -13,7 +13,7 @@ This repository contains the **public SaaS website** (Next.js App Router) and th
 
 1. Create a Supabase project.
 2. Run SQL in **`supabase/migrations/001_create_tables.sql`**, then optionally **`supabase/seed.sql`**, in the Supabase SQL editor. Full details: **[supabase/README.md](supabase/README.md)**.
-3. Create `.env.local` and add your Supabase keys. Default admin allowlist email is **admin@gmail.com**; create that user with **`npm run seed:admin`** (password **admin123**) or add the user manually in Supabase Auth.
+3. Create `.env.local` and add your Supabase keys. Default admin allowlist email is **admin@gmail.com**; create that user with **`DEV_ADMIN_PASSWORD='...' npm run seed:admin`** or add the user manually in Supabase Auth.
 4. Install + run:
 
 ```bash

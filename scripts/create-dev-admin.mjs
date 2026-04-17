@@ -16,8 +16,20 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
-const DEV_EMAIL = "admin@gmail.com";
-const DEV_PASSWORD = "admin123";
+const DEV_EMAIL = process.env.DEV_ADMIN_EMAIL?.trim() || "admin@gmail.com";
+const DEV_PASSWORD = process.env.DEV_ADMIN_PASSWORD?.trim() || "";
+
+if (!DEV_PASSWORD) {
+  console.error("");
+  console.error("seed:admin requires a password now (to avoid committing a known default).");
+  console.error("");
+  console.error("Set an env var and re-run:");
+  console.error("  DEV_ADMIN_PASSWORD='your-strong-password' npm run seed:admin");
+  console.error("Optional:");
+  console.error("  DEV_ADMIN_EMAIL='admin@gmail.com' DEV_ADMIN_PASSWORD='...' npm run seed:admin");
+  console.error("");
+  process.exit(1);
+}
 
 function isPlaceholder(val) {
   if (val == null || String(val).trim() === "") return true;
