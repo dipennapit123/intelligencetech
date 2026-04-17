@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/* Force class-based dark mode so OS dark-mode preference doesn't fire dark: variants */
+@variant dark (&:where(.dark, .dark *));
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ── Stitch design tokens (added alongside TW defaults, not replacing them) ── */
+@theme inline {
+  --color-primary: #14213d;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #fca311;
+  --color-on-primary-container: #000000;
+
+  --color-background: #ffffff;
+  --color-on-background: #14213d;
+  --color-surface: #ffffff;
+  --color-on-surface: #14213d;
+  --color-on-surface-variant: #475569;
+  --color-surface-container: #f5f5f5;
+  --color-surface-container-low: #f5f5f5;
+  --color-surface-container-high: #e5e5e5;
+  --color-surface-container-highest: #d4d4d4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #e5e5e5;
+  --color-surface-variant: #e5e5e5;
+  --color-surface-tint: #14213d;
+
+  --color-secondary: #475569;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e2e8f0;
+  --color-on-secondary-container: #14213d;
+  --color-secondary-fixed: #e2e8f0;
+  --color-secondary-fixed-dim: #cbd5e1;
+  --color-on-secondary-fixed: #0f172a;
+  --color-on-secondary-fixed-variant: #334155;
+
+  --color-tertiary: #64748b;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #cbd5e1;
+  --color-on-tertiary-container: #334155;
+  --color-tertiary-fixed: #e2e8f0;
+  --color-tertiary-fixed-dim: #cbd5e1;
+  --color-on-tertiary-fixed: #1e293b;
+  --color-on-tertiary-fixed-variant: #475569;
+
+  --color-error: #dc2626;
+  --color-on-error: #ffffff;
+  --color-error-container: #fecaca;
+  --color-on-error-container: #991b1b;
+
+  --color-outline: #94a3b8;
+  --color-outline-variant: #e2e8f0;
+  --color-inverse-surface: #14213d;
+  --color-inverse-on-surface: #f8fafc;
+  --color-inverse-primary: #fca311;
+  --color-primary-fixed: #fef3c7;
+  --color-primary-fixed-dim: #fcd34d;
+  --color-on-primary-fixed: #14213d;
+  --color-on-primary-fixed-variant: #14213d;
+
+  --font-body: "Saira Stencil", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Saira Stencil", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Saira Stencil", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #14213d;
+  font-family: "Saira Stencil", ui-sans-serif, system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  letter-spacing: 0.035em;
+  word-spacing: 0.06em;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  color: #14213d;
+  letter-spacing: 0.02em;
+  word-spacing: 0.06em;
+  line-height: 1.12;
+}
+
+h2 {
+  color: #14213d;
+  letter-spacing: 0.02em;
+  word-spacing: 0.06em;
+  line-height: 1.18;
+}
+
+h3, h4 {
+  color: #14213d;
+  letter-spacing: 0.025em;
+  word-spacing: 0.06em;
+  line-height: 1.25;
+}
+
+h5, h6 {
+  color: #14213d;
+  letter-spacing: 0.04em;
+  word-spacing: 0.06em;
+  line-height: 1.35;
+}
+
+p {
+  line-height: 1.85;
+  letter-spacing: 0.035em;
+  word-spacing: 0.08em;
+  color: #475569;
+}
+
+small, .text-xs, .text-sm {
+  letter-spacing: 0.045em;
+  word-spacing: 0.06em;
+}
+
+strong, b {
+  letter-spacing: 0.02em;
+}
+
+::selection {
+  background: rgba(252, 163, 17, 0.25);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.scale-102:hover {
+  transform: scale(1.02);
+}
+
+/* ── Custom typography (Saira Stencil variable) ── */
+.saira-stencil {
+  font-family: "Saira Stencil", ui-sans-serif, system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* ── Blog prose styling ── */
+.prose-it :where(h2) {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-it :where(h3) {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-it :where(p) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.75rem;
+}
+
+.prose-it :where(ul) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.prose-it :where(ol) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+  list-style: decimal;
+}
+
+.prose-it :where(li) {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.prose-it :where(a) {
+  color: #14213d;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.25);
+  text-underline-offset: 3px;
+}
+
+.prose-it :where(code) {
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.5rem;
+}
+
+.prose-it :where(pre) {
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 1rem;
+  border-radius: 1rem;
+}

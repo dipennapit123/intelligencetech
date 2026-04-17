@@ -1,0 +1,247 @@
+[
+  {
+    "key": "hero",
+    "value": {
+      "eyebrow": "The Next Frontier",
+      "headlineLine1": "Intelligence,",
+      "headlineLine2": "Engineered.",
+      "body": "A growing ecosystem of intelligent SaaS products designed to streamline workflows, optimize growth, and redefine the standard of modern enterprise tools.",
+      "primaryCta": {
+        "label": "Explore Products",
+        "href": "/products"
+      },
+      "secondaryCta": {
+        "label": "Watch Demo",
+        "href": "/updates"
+      },
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBvKMEBsEr8oTeuZQHM5ffRxWUc6r2X1U7VR8d2uavy9sMROUpRlZuW2Fdr9SOu8X6tvnmzR4IUnMDp5mxQkFXQiizPTxxiFZkkJ_9tLUEEL2BoIs6cELTON6Nv_cCECnkI4n17gmEZrWwmCm679KdRofXtk41i0ObXshs3zAoBVhf4kCDUpl2tpHQ6xrwNJBG_uLcO2d4vfPGowrXkgrKiSm7qzfhk8jDryu0uq8Gj1dM0em_4n9SlZ6M6KGVMQB0TofApmGI9QP0Z",
+      "imageAlt": "Abstract 3D architectural render with glowing amber nodes and sleek metallic surfaces representing neural network architecture"
+    }
+  },
+  {
+    "key": "about",
+    "value": {
+      "label": "About Us",
+      "heading": "We build the tools that build the future.",
+      "body": "Intelligence Tech is a product-driven technology company building a connected ecosystem of SaaS tools designed for the modern enterprise. Our platform shares a singular intelligence layer that makes every tool smarter — together.",
+      "pillars": [
+        {
+          "icon": "rocket_launch",
+          "title": "Our Mission",
+          "desc": "To democratize intelligent software — making enterprise-grade tools accessible to teams of every size."
+        },
+        {
+          "icon": "visibility",
+          "title": "Our Vision",
+          "desc": "A world where every business decision is powered by interconnected, self-optimizing software systems."
+        },
+        {
+          "icon": "diversity_3",
+          "title": "Our Culture",
+          "desc": "Remote-first, builder-focused, and deeply committed to shipping products that people genuinely love."
+        }
+      ],
+      "stats": [
+        {
+          "value": "4+",
+          "label": "Products Shipped"
+        },
+        {
+          "value": "99.9%",
+          "label": "Platform Uptime"
+        },
+        {
+          "value": "10K+",
+          "label": "Active Users"
+        },
+        {
+          "value": "40%",
+          "label": "Avg. Cost Savings"
+        }
+      ]
+    }
+  },
+  {
+    "key": "nav_links",
+    "value": {
+      "mainLinks": [
+        {
+          "label": "Products",
+          "href": "/products"
+        },
+        {
+          "label": "About Us",
+          "href": "/about"
+        },
+        {
+          "label": "Contact Us",
+          "href": "/contact"
+        }
+      ],
+      "signInLabel": "Sign In",
+      "signInHref": "/blog",
+      "ctaLabel": "Get Started",
+      "ctaHref": "/products"
+    }
+  },
+  {
+    "key": "footer",
+    "value": {
+      "tagline": "Building the software layer for the next generation of digital enterprise.",
+      "socialLinks": [
+        {
+          "platform": "facebook",
+          "url": "https://facebook.com"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com"
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://linkedin.com"
+        }
+      ],
+      "columns": [
+        {
+          "title": "Products",
+          "links": [
+            {
+              "label": "Product Tour",
+              "href": "/products"
+            },
+            {
+              "label": "API Documentation",
+              "href": "/api/products"
+            },
+            {
+              "label": "Ecosystem Hub",
+              "href": "/ecosystem"
+            }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            {
+              "label": "Release Notes",
+              "href": "/updates"
+            },
+            {
+              "label": "Blog",
+              "href": "/blog"
+            },
+            {
+              "label": "Privacy Policy",
+              "href": "/legal/privacy"
+            }
+          ]
+        },
+        {
+          "title": "Contact",
+          "links": [
+            {
+              "label": "support@intelligencetech.com",
+              "href": "mailto:support@intelligencetech.com"
+            },
+            {
+              "label": "HQ: 500 Silicon Way, CA",
+              "href": "#"
+            }
+          ]
+        }
+      ],
+      "copyright": "Intelligence Tech Editorial"
+    }
+  },
+  {
+    "key": "contact_info",
+    "value": {
+      "eyebrow": "Contact Us",
+      "heading": "Let's talk.",
+      "body": "Whether you have a question about our products, need a demo, or want to explore partnership opportunities — we'd love to hear from you.",
+      "details": [
+        {
+          "icon": "mail",
+          "label": "Email",
+          "value": "support@intelligencetech.com"
+        },
+        {
+          "icon": "location_on",
+          "label": "Headquarters",
+          "value": "500 Silicon Way, San Francisco, CA 94105"
+        },
+        {
+          "icon": "schedule",
+          "label": "Business Hours",
+          "value": "Mon – Fri, 9:00 AM – 6:00 PM PST"
+        }
+      ]
+    }
+  },
+  {
+    "key": "privacy_policy",
+    "value": {
+      "lastUpdated": "April 15, 2026",
+      "intro": "At Intelligence Tech, protecting your privacy is fundamental to our mission. This policy explains how we collect, use, and safeguard your information.",
+      "sections": [
+        {
+          "title": "Information we collect",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Information you provide",
+              "body": "Account details, contact information, and any content you submit through our platform."
+            },
+            {
+              "title": "Usage information",
+              "body": "How you interact with our services, including pages visited, features used, and time spent."
+            },
+            {
+              "title": "Cookies & tracking",
+              "body": "We use cookies and similar technologies to remember preferences and improve experience."
+            },
+            {
+              "title": "Log data",
+              "body": "Server logs that include IP address, browser type, and referring pages."
+            }
+          ]
+        },
+        {
+          "title": "How we use information",
+          "type": "bullets",
+          "items": [
+            "To provide, maintain, and improve our services",
+            "To communicate with you about updates and changes",
+            "To detect and prevent fraud or abuse",
+            "To comply with legal obligations",
+            "To personalize your experience"
+          ]
+        },
+        {
+          "title": "How we share information",
+          "type": "mixed",
+          "intro": "We do not sell your personal information. We may share data with:",
+          "items": [
+            "Service providers who assist in operations",
+            "Legal authorities when required by law",
+            "Business partners with your consent",
+            "Affiliated companies within our ecosystem"
+          ]
+        },
+        {
+          "title": "Data retention & security",
+          "type": "paragraph",
+          "body": "We retain your data only as long as necessary for the purposes outlined in this policy. We employ industry-standard encryption, access controls, and monitoring to protect your information."
+        },
+        {
+          "title": "Your choices & rights",
+          "type": "paragraph",
+          "body": "You can access, update, or delete your account information at any time. You may opt out of marketing communications. Depending on your jurisdiction, you may have additional rights under GDPR, CCPA, or similar regulations."
+        }
+      ],
+      "contactEmail": "support@intelligencetech.com",
+      "contactAddress": "HQ: 500 Silicon Way, CA"
+    }
+  }
+]

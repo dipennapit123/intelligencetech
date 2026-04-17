@@ -1,0 +1,431 @@
+[
+  {
+    "name": "ScaleWise",
+    "slug": "scalewise",
+    "description": "Autonomous resource scaling for distributed infrastructures.",
+    "category": "Platform",
+    "status": "active",
+    "icon": "insights",
+    "featured": true,
+    "featured_order": 1,
+    "logo_url": null,
+    "page_content": {
+      "eyebrow": "Intelligence Ecosystem Product",
+      "headline": "ScaleWise",
+      "subhead": "Autonomous Scaling for Modern Infrastructure.",
+      "heroCopy": "Predict load, optimize resources, and scale your infrastructure with zero manual intervention. Built on the next‑gen Neural Engine.",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuAeAxcu6zyY4OgnsBKQchFs49w4k5T9vYrqxbmCPcEweuduRZGEBfQLzaGdtlw9OoUnPiYkgAL_wIPti4nbH2BdQ1lGZvVnd_nPGN9C9gLndjT55yMtxfhSAL1-j94DfHj0InrlnYginkK6viW8ir0H31Vigrv8buTJJHBLW5BTndEyyCagpdKjK-ezWVfK19y89vSlr2tMbYyhr2tat9cNaYAw4P79XUXSZ0LD9sXTMBil2OzUFSJY7vuyt9iBNvB1AJR413l7pxgj",
+      "benefits": [
+        {
+          "icon": "insights",
+          "title": "Predictive Load Balancing",
+          "desc": "Our AI anticipates traffic spikes before they hit your nodes, ensuring zero downtime during critical surges."
+        },
+        {
+          "icon": "savings",
+          "title": "Cost Optimization",
+          "desc": "Intelligently decommission idle resources to reduce cloud waste by up to 40% without compromising performance."
+        },
+        {
+          "icon": "rocket_launch",
+          "title": "Instant Deployment",
+          "desc": "Deploy in minutes with native 1‑click integrations for AWS, GCP, Azure, and private cloud clusters."
+        }
+      ],
+      "deepDive": [
+        {
+          "eyebrow": "Proprietary AI",
+          "title": "The Neural Engine",
+          "copy": "Unlike traditional threshold-based scaling, the Neural Engine uses temporal pattern recognition to understand your application's unique heartbeat. It learns from history to engineer the future of your infrastructure.",
+          "bullets": [
+            "Sub-millisecond decision logic",
+            "Multi-variable anomaly detection"
+          ],
+          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkalvA6GRwcBvCpx6uBLv7eYC4BGswnZWXe0L6eKMQbkLcPQx5J0yFhQ2efSql_iu67jj1Eedk6ZHWQggBVmCXM-ytMU54hVhllJgt2N2uZpby6nRbiHDYRTmY3akLkhNIoG1a9FurzeDOeayf-FEJBpZXQZ_pLiN-J0SBt_FJDl8AGGJueO-2r-3p2S0rmDVIpjCp2E0cgRQKZhMHT8I8KLncTlGohocC-ThCbJvjG8YkLjjJIoQsVl-zRuQ-Yf2Uw3CqZbJwes5H",
+          "imageStyle": "card",
+          "bgTinted": true,
+          "layout": "image-left"
+        },
+        {
+          "eyebrow": "Infrastructure",
+          "title": "Global Edge Network",
+          "copy": "ScaleWise operates across 140+ global points of presence. By distributing the scaling logic to the edge, we reduce latency and ensure your infrastructure responds instantly to users, regardless of geography.",
+          "link": {
+            "label": "Explore our network",
+            "href": "#"
+          },
+          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCmfGDmqaPVSrOSA_EqIOHNmrRbUJuvUgy8g2XA9qFl_bBNgdZShAjAfdlC79Y4y801s4SqLV4jcLd1akKDWzqx0sOK0n0nqjT16qM_M0IYsKAzb_N9OsvK1HjNrsCFn1bAiqvuRgWfnUfccvtgz9US3v0szIEG8C4hkhoKqbpBDz-fR_-LTVh3Mmy1e73mYsZAZhGEb2Gp_InK_U-PvhPv__-bQ-jG4m0MweM-vO9htj155qxilzRi890lzlrputn6i3jVcBnlCqD9",
+          "imageStyle": "circle",
+          "bgTinted": false,
+          "layout": "image-right"
+        }
+      ],
+      "testimonial": {
+        "quote": "ScaleWise didn't just save us money on our AWS bill; it gave our engineering team back 15 hours a week. It's the silent architect every high-growth startup needs.",
+        "author": "Marcus Thorne",
+        "role": "CTO, NexaGen Labs"
+      },
+      "integrity": [
+        {
+          "icon": "verified_user",
+          "title": "SOC2 Type II",
+          "desc": "Fully compliant with the highest industry security standards."
+        },
+        {
+          "icon": "update",
+          "title": "99.99% Uptime",
+          "desc": "Guaranteed reliability with our premium service level agreement."
+        },
+        {
+          "icon": "api",
+          "title": "REST & GraphQL",
+          "desc": "Deeply extensible API architecture for custom workflows."
+        },
+        {
+          "icon": "lock",
+          "title": "End-to-End Encryption",
+          "desc": "Your infrastructure metadata is encrypted in transit and at rest."
+        }
+      ],
+      "cta": {
+        "heading": "Ready to scale?",
+        "body": "Join 2,000+ companies optimizing their infrastructure with the intelligence of ScaleWise.",
+        "buttonLabel": "Start Your Free Trial",
+        "buttonHref": "/products"
+      }
+    }
+  },
+  {
+    "name": "OmniGraph",
+    "slug": "omnigraph",
+    "description": "Relational data visualization for complex ecosystems.",
+    "category": "Platform",
+    "status": "active",
+    "icon": "hub",
+    "featured": true,
+    "featured_order": 2,
+    "logo_url": null,
+    "page_content": {
+      "eyebrow": "Intelligence Ecosystem Product",
+      "headline": "OmniGraph",
+      "subhead": "See Every Connection. Own Every Decision.",
+      "heroCopy": "Turn tangled systems into clean, navigable graphs—so teams can trace lineage, ownership, and impact in minutes.",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCmfGDmqaPVSrOSA_EqIOHNmrRbUJuvUgy8g2XA9qFl_bBNgdZShAjAfdlC79Y4y801s4SqLV4jcLd1akKDWzqx0sOK0n0nqjT16qM_M0IYsKAzb_N9OsvK1HjNrsCFn1bAiqvuRgWfnUfccvtgz9US3v0szIEG8C4hkhoKqbpBDz-fR_-LTVh3Mmy1e73mYsZAZhGEb2Gp_InK_U-PvhPv__-bQ-jG4m0MweM-vO9htj155qxilzRi890lzlrputn6i3jVcBnlCqD9",
+      "benefits": [
+        {
+          "icon": "hub",
+          "title": "Dependency Mapping",
+          "desc": "Visualize services, data, and ownership in real-time."
+        },
+        {
+          "icon": "query_stats",
+          "title": "Impact Analysis",
+          "desc": "Understand how a change cascades across systems before you ship."
+        },
+        {
+          "icon": "speed",
+          "title": "Fast Scanning",
+          "desc": "Large graphs feel calm, readable, and actionable."
+        }
+      ],
+      "deepDive": [
+        {
+          "eyebrow": "Visualization",
+          "title": "Graph Intelligence Engine",
+          "copy": "OmniGraph uses advanced layout algorithms to keep large graphs scannable. Zoom from a 10,000-foot view down to individual edges without losing context.",
+          "bullets": [
+            "Auto-layout for 1000+ node graphs",
+            "Real-time dependency detection"
+          ],
+          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkalvA6GRwcBvCpx6uBLv7eYC4BGswnZWXe0L6eKMQbkLcPQx5J0yFhQ2efSql_iu67jj1Eedk6ZHWQggBVmCXM-ytMU54hVhllJgt2N2uZpby6nRbiHDYRTmY3akLkhNIoG1a9FurzeDOeayf-FEJBpZXQZ_pLiN-J0SBt_FJDl8AGGJueO-2r-3p2S0rmDVIpjCp2E0cgRQKZhMHT8I8KLncTlGohocC-ThCbJvjG8YkLjjJIoQsVl-zRuQ-Yf2Uw3CqZbJwes5H",
+          "imageStyle": "card",
+          "bgTinted": true,
+          "layout": "image-left"
+        }
+      ],
+      "testimonial": {
+        "quote": "OmniGraph turned our architecture reviews from 2-hour meetings into 10-minute walkthroughs.",
+        "author": "Sarah Lin",
+        "role": "VP Engineering, DataCore"
+      },
+      "integrity": [
+        {
+          "icon": "verified_user",
+          "title": "SOC2 Type II",
+          "desc": "Fully compliant with the highest industry security standards."
+        },
+        {
+          "icon": "update",
+          "title": "99.99% Uptime",
+          "desc": "Guaranteed reliability with our premium service level agreement."
+        },
+        {
+          "icon": "api",
+          "title": "REST & GraphQL",
+          "desc": "Deeply extensible API architecture for custom workflows."
+        },
+        {
+          "icon": "lock",
+          "title": "End-to-End Encryption",
+          "desc": "Your data is encrypted in transit and at rest."
+        }
+      ],
+      "cta": {
+        "heading": "Ready to see clearly?",
+        "body": "Join teams using OmniGraph to navigate complexity with confidence.",
+        "buttonLabel": "Start Your Free Trial",
+        "buttonHref": "/products"
+      }
+    }
+  },
+  {
+    "name": "FlowGenie",
+    "slug": "flowgenie",
+    "description": "Generative automation for repetitive operational tasks.",
+    "category": "Platform",
+    "status": "active",
+    "icon": "auto_fix_high",
+    "featured": true,
+    "featured_order": 3,
+    "logo_url": null,
+    "page_content": {
+      "eyebrow": "Intelligence Ecosystem Product",
+      "headline": "FlowGenie",
+      "subhead": "Automate the Repetitive. Focus on the Important.",
+      "heroCopy": "From runbooks to intelligent workflows: reduce operational toil without sacrificing control.",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBvKMEBsEr8oTeuZQHM5ffRxWUc6r2X1U7VR8d2uavy9sMROUpRlZuW2Fdr9SOu8X6tvnmzR4IUnMDp5mxQkFXQiizPTxxiFZkkJ_9tLUEEL2BoIs6cELTON6Nv_cCECnkI4n17gmEZrWwmCm679KdRofXtk41i0ObXshs3zAoBVhf4kCDUpl2tpHQ6xrwNJBG_uLcO2d4vfPGowrXkgrKiSm7qzfhk8jDryu0uq8Gj1dM0em_4n9SlZ6M6KGVMQB0TofApmGI9QP0Z",
+      "benefits": [
+        {
+          "icon": "auto_fix_high",
+          "title": "Smart Workflows",
+          "desc": "Generate automation flows from natural language descriptions."
+        },
+        {
+          "icon": "security",
+          "title": "Guardrails Built In",
+          "desc": "Approvals, diffs, and audit trails for every automated action."
+        },
+        {
+          "icon": "undo",
+          "title": "Rollback-First",
+          "desc": "Every action is reversible with one click."
+        }
+      ],
+      "deepDive": [
+        {
+          "eyebrow": "Automation",
+          "title": "Generative Workflow Engine",
+          "copy": "Describe what you want in plain English and FlowGenie generates the workflow, complete with error handling and rollback steps.",
+          "bullets": [
+            "Natural language to workflow",
+            "Built-in approval gates"
+          ],
+          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAOAbucxLWL1CQOOp8fEMXo9d_126zxnkKl7gJ0DgtlCpQ1nXKbcfhgOxvp1DOQCyWEVmh_xlajAKJSkHLJhyzU64zdQWyHtpAvgbdNl7qKBYIi8MgWaso7jDhOM6uQXnhNSgpjZEDJ4P9_CfUemm92G0XH2Jgdq-OWVEUfK-X0ZLnrEFq4iKXR3cWG6E4VflrHlrAUg4id-oBHmokGsanM_XG9vapk1Oqyl-5GfbKS_kNWdzLu5jPYEmKeREajgFXGrJEuosl7qjgE",
+          "imageStyle": "card",
+          "bgTinted": true,
+          "layout": "image-left"
+        }
+      ],
+      "testimonial": {
+        "quote": "FlowGenie cut our ops toil by 60% in the first month. The guardrails make automation feel safe.",
+        "author": "James Okoro",
+        "role": "SRE Lead, CloudShift"
+      },
+      "integrity": [
+        {
+          "icon": "verified_user",
+          "title": "SOC2 Type II",
+          "desc": "Fully compliant with the highest industry security standards."
+        },
+        {
+          "icon": "update",
+          "title": "99.99% Uptime",
+          "desc": "Guaranteed reliability with our premium service level agreement."
+        },
+        {
+          "icon": "api",
+          "title": "REST & GraphQL",
+          "desc": "Deeply extensible API architecture for custom workflows."
+        },
+        {
+          "icon": "lock",
+          "title": "End-to-End Encryption",
+          "desc": "All workflow data is encrypted in transit and at rest."
+        }
+      ],
+      "cta": {
+        "heading": "Ready to automate?",
+        "body": "Join teams shipping faster with FlowGenie's intelligent automation.",
+        "buttonLabel": "Start Your Free Trial",
+        "buttonHref": "/products"
+      }
+    }
+  },
+  {
+    "name": "NeuralHub",
+    "slug": "neuralhub",
+    "description": "Centralized intelligence repository for shared team learning.",
+    "category": "Platform",
+    "status": "active",
+    "icon": "psychology",
+    "featured": true,
+    "featured_order": 4,
+    "logo_url": null,
+    "page_content": {
+      "eyebrow": "Intelligence Ecosystem Product",
+      "headline": "NeuralHub",
+      "subhead": "Your Team's Collective Brain.",
+      "heroCopy": "A calm, contextual workspace for real institutional learning. Connect decisions to incidents, runbooks to outcomes.",
+      "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCzwtLbrNIZYrnTqG4iHUJOQaQU-1cRbxD44IcbwWqEzhQe1rckgAvbsB_Csxhmyke9JyjakuiFPTJLBhPe46ryFSh9NdR_5DDqyg87KUc2PLFQ3TLjS7rN_BmYpGXxaxOiG3ZdcjECNzlFdtwGWGs5VhJkO54zNxgh-K7esrwo6eRdxq7KstwCTDW1feeJbKdrgS00L6mEJ_4IF5F7PLngoo_0qOwzRLEA7bu5UI-ngnEc2ol6ICOpLPxiQ3Nfc79nQbTA3SjqUU54",
+      "benefits": [
+        {
+          "icon": "psychology",
+          "title": "Contextual Knowledge",
+          "desc": "Connect decisions to incidents, runbooks to outcomes, patterns to teams."
+        },
+        {
+          "icon": "search",
+          "title": "Smart Search",
+          "desc": "Find answers instantly with AI-powered semantic search."
+        },
+        {
+          "icon": "group",
+          "title": "Team Learning",
+          "desc": "Build institutional memory that grows with your organization."
+        }
+      ],
+      "deepDive": [
+        {
+          "eyebrow": "Knowledge",
+          "title": "Contextual Intelligence Layer",
+          "copy": "NeuralHub doesn't just store docs — it understands relationships between knowledge, incidents, and teams.",
+          "bullets": [
+            "Semantic search across all content",
+            "Auto-linked context graphs"
+          ],
+          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBhLxnspFc3Ft2uDaHu9mEHZU_tRd8vZDtwzBkvaYaZKUTq4CAZPpg6WPGmbVkOJqnxVkNDnPCXdIDYpCVfSG_wz1sdlSO88aDNI20IoxGoPtlHx-mmLqEfGXpPBetDcUSPFfwJZwB4EFW4boTq54HlwfVyx9KQvNv-ccTB9NR81t_qoBBTJ7Qyp5gh0XINULAynZokhLVQwi9oETRZ8K3iKkV4rZZdNtOJPS4qjn7pfKKcmCyyAc65Q7M4D3qEAIz9h3t4XArJtWzy",
+          "imageStyle": "circle",
+          "bgTinted": false,
+          "layout": "image-right"
+        }
+      ],
+      "testimonial": {
+        "quote": "NeuralHub transformed how our distributed team shares knowledge. Onboarding time dropped 40%.",
+        "author": "Priya Sharma",
+        "role": "Head of Engineering, Nextera"
+      },
+      "integrity": [
+        {
+          "icon": "verified_user",
+          "title": "SOC2 Type II",
+          "desc": "Fully compliant with the highest industry security standards."
+        },
+        {
+          "icon": "update",
+          "title": "99.99% Uptime",
+          "desc": "Guaranteed reliability with our premium service level agreement."
+        },
+        {
+          "icon": "api",
+          "title": "REST & GraphQL",
+          "desc": "Deeply extensible API architecture for custom workflows."
+        },
+        {
+          "icon": "lock",
+          "title": "End-to-End Encryption",
+          "desc": "All knowledge data is encrypted in transit and at rest."
+        }
+      ],
+      "cta": {
+        "heading": "Ready to learn faster?",
+        "body": "Join teams building lasting institutional knowledge with NeuralHub.",
+        "buttonLabel": "Start Your Free Trial",
+        "buttonHref": "/products"
+      }
+    }
+  },
+  {
+    "name": "SignalStack",
+    "slug": "signalstack",
+    "description": "Event pipelines and alerting with unified intelligence routing.",
+    "category": "Platform",
+    "status": "beta",
+    "icon": "notifications_active",
+    "featured": false,
+    "featured_order": 0,
+    "logo_url": null,
+    "page_content": {}
+  },
+  {
+    "name": "PolicyForge",
+    "slug": "policyforge",
+    "description": "Automated compliance checks and policy enforcement for teams.",
+    "category": "Security",
+    "status": "beta",
+    "icon": "policy",
+    "featured": false,
+    "featured_order": 0,
+    "logo_url": null,
+    "page_content": {}
+  },
+  {
+    "name": "OmniOps",
+    "slug": "omniops",
+    "description": "Ops command center for incidents, runbooks, and on-call coordination.",
+    "category": "Operations",
+    "status": "beta",
+    "icon": "terminal",
+    "featured": false,
+    "featured_order": 0,
+    "logo_url": null,
+    "page_content": {}
+  },
+  {
+    "name": "AuditTrail",
+    "slug": "audittrail",
+    "description": "Immutable change logs and forensic timelines for critical systems.",
+    "category": "Security",
+    "status": "beta",
+    "icon": "history",
+    "featured": false,
+    "featured_order": 0,
+    "logo_url": null,
+    "page_content": {}
+  },
+  {
+    "name": "WorkMesh",
+    "slug": "workmesh",
+    "description": "Unified workflow orchestration across teams and tools.",
+    "category": "Platform",
+    "status": "beta",
+    "icon": "share",
+    "featured": false,
+    "featured_order": 0,
+    "logo_url": null,
+    "page_content": {}
+  },
+  {
+    "name": "InsightHub",
+    "slug": "insighthub",
+    "description": "Executive analytics with narrative dashboards powered by AI.",
+    "category": "Analytics",
+    "status": "beta",
+    "icon": "analytics",
+    "featured": false,
+    "featured_order": 0,
+    "logo_url": null,
+    "page_content": {}
+  },
+  {
+    "name": "SecureGate",
+    "slug": "securegate",
+    "description": "Identity-aware access and policy controls for modern stacks.",
+    "category": "Security",
+    "status": "beta",
+    "icon": "shield",
+    "featured": false,
+    "featured_order": 0,
+    "logo_url": null,
+    "page_content": {}
+  }
+]

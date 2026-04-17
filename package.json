@@ -1,0 +1,39 @@
+{
+  "name": "intelligence-tech-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "seed:admin": "node scripts/create-dev-admin.mjs",
+    "seed:dummy": "node scripts/seed-dummy-data.mjs",
+    "seed:dummy:generate": "tsx scripts/generate-seed-json.ts && node scripts/extract-products-json.mjs && node scripts/extract-seed-json.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.103.1",
+    "framer-motion": "^12.38.0",
+    "next": "16.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "rehype-external-links": "^3.0.0",
+    "rehype-sanitize": "^6.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark": "^15.0.1",
+    "remark-rehype": "^11.1.2",
+    "resend": "^6.12.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "tailwindcss": "^4",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}
