@@ -15,6 +15,11 @@ type Product = {
   created_at: string;
 };
 
+function productAppUrl(slug: string) {
+  // Public-facing product apps live on their own subdomains.
+  return `https://${slug}.inteligencetech.com`;
+}
+
 function productThumbnail(slug: string) {
   switch (slug) {
     case "scalewise":
@@ -125,17 +130,19 @@ export function ProductsPageClient({
                   {productDescription(p.slug)}
                 </p>
                 <div className="flex flex-wrap gap-3 pt-2">
-                  <Link
-                    href={`/products/${p.slug}`}
+                  <a
+                    href={productAppUrl(p.slug)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="px-6 py-3 bg-gradient-to-br from-[#14213d] to-[#fca311] text-on-primary rounded-xl font-bold hover:scale-[1.02] transition-all duration-500 shadow-lg shadow-primary/15"
                   >
-                    View Product Page
-                  </Link>
+                    Visit Site
+                  </a>
                   <Link
-                    href="/contact"
+                    href={`/products/${p.slug}`}
                     className="px-6 py-3 border-2 border-outline-variant/30 text-on-surface rounded-xl font-bold hover:bg-surface-container-low transition-colors"
                   >
-                    Book a Demo
+                    Read More
                   </Link>
                 </div>
               </TextColumn>
